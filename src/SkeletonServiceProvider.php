@@ -20,6 +20,7 @@ class :studly_package_nameServiceProvider extends ServiceProvider
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
+            // Publishing the config.
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path(':package_name.php'),
             ], 'config');
